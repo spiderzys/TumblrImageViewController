@@ -4,6 +4,10 @@ It shows the images of tumblr blogs in the controller.
 
 <img src="https://github.com/spiderzys/TumblrImageViewController/blob/master/example.png" width="88">
 
+To import it, just 
+
+            pod 'TumblrImageViewController' 
+in pod file.
 
 The implementation of the following protocal is necessary
 
