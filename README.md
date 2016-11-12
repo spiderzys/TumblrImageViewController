@@ -4,18 +4,18 @@ It shows the images of tumblr blogs in the controller.
 
 To use it, the implementation of the following protocal is necessary
 
-@protocol TumblrImageViewControllerDelegate <NSObject>  // the delegate should know what to do after request and apikey
+    @protocol TumblrImageViewControllerDelegate <NSObject>  // the delegate should know what to do after request and apikey
 
-@required
+    @required
 
-- (void)tumblrImagePickerController:(__kindof UIViewController *)picker didFinishPickingImage:(UIImage *)image;
-- (NSString*)apikey;
+    - (void)tumblrImagePickerController:(__kindof UIViewController *)picker didFinishPickingImage:(UIImage *)image;
+    - (NSString*)apikey;
 
-@optional
+    @optional
 
-- (void)didRequestFailedDueToErrorMessage:(NSString*)errorMessage;
+    - (void)didRequestFailedDueToErrorMessage:(NSString*)errorMessage;
 
-@end
+    @end
 
 To get the apikey (OAuth Consumer Key), you can go to https://www.tumblr.com/docs/en/api/v2 to register your application
 
@@ -26,27 +26,27 @@ In addition, you can set alertMessage for when no return data.
 Below is an example:
 
     
-TumblrImageViewController *tumblrImageViewController = [[TumblrImageViewController alloc]init];
+    TumblrImageViewController *tumblrImageViewController = [[TumblrImageViewController alloc]init];
     
-tumblrImageViewController.numOfColumns = 5;
+    tumblrImageViewController.numOfColumns = 5;
     
-tumblrImageViewController.delegate = self;
+    tumblrImageViewController.delegate = self;
     
-[self presentViewController:tumblrImageViewController animated:YES completion:^{
+    [self presentViewController:tumblrImageViewController animated:YES completion:^{
         
     }];
 
 
 
-- (NSString*)apikey{
-    return @"put your key";
-}
+    - (NSString*)apikey{
+       return @"put your key";
+     }
 
-- (void)tumblrImagePickerController:(__kindof UIViewController *)picker didFinishPickingImage:(UIImage *)image{
+     - (void)tumblrImagePickerController:(__kindof UIViewController *)picker didFinishPickingImage:(UIImage *)image{
 
     [picker dismissViewControllerAnimated:YES completion:^{
     
         self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     }];
     
-}
+     }
