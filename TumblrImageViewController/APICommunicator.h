@@ -15,7 +15,9 @@ typedef NS_ENUM(NSInteger,API){
 };
 
 @protocol APICommunicatorDelegate <NSObject>  // the delegate should know what to do after request
+@required
 - (void)didGetPhotoUrls:(NSMutableArray*)photoUrlArray;
+- (void)didRequestFailedDueToErrorMessage:(NSString*)errorMessage;
 @end
 
 

@@ -23,27 +23,36 @@
     
     NSString *blogRequestString = [NSString stringWithFormat:@"https://api.tumblr.com/v2/blog/%@.tumblr.com/posts/photo?api_key=%@",blog,apikey];
     [[[NSURLSession sharedSession]dataTaskWithURL:[NSURL URLWithString:blogRequestString] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        [self parseTumblrData:data];
+        if(error){
+            [_delegate didRequestFailedDueToErrorMessage:error.description];
+        }
+        else{
+            [self parseTumblrData:data];
+        }
     }]resume];
 
     
 }
 
 - (void)parseTumblrData:(NSData*)data{
-    
-    // parse data and sent url array to view controller
     NSError *parserError;
     NSMutableArray *photoUrlArray = [NSMutableArray new];
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parserError];
     NSLog(@"%@",dic);
     if(!data){
-        NSLog(@"no data");
+        [_delegate didRequestFailedDueToErrorMessage:@"No data"];
     }
     else if(parserError){
         NSLog(@"%@",parserError);
     }
     else{
         NSDictionary *response = [dic objectForKey:@"response"];
+        
+        if (response.count == 0){
+            [_delegate didRequestFailedDueToErrorMessage:@"No blog found"];
+            return;
+        }
+        
         NSArray *posts = [response objectForKey:@"posts"];
         
         for (NSDictionary* post in posts){
@@ -58,6 +67,7 @@
     }
     [_delegate didGetPhotoUrls:photoUrlArray];
 }
+
 
 
 @end

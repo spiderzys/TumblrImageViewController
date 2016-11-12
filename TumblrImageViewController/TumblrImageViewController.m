@@ -159,6 +159,10 @@
     });
 }
 
+- (void)didRequestFailedDueToErrorMessage:(NSString *)errorMessage{
+    [_delegate didRequestFailedDueToErrorMessage:errorMessage];
+}
+
 
 #pragma Image ColletionView data source
 
