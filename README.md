@@ -2,7 +2,10 @@
 
 It shows the images of tumblr blogs in the controller.
 
-To use it, the implementation of the following protocal is necessary
+<img src="https://github.com/spiderzys/TumblrImageViewController/blob/master/example.png" width="88">
+
+
+The implementation of the following protocal is necessary
 
     @protocol TumblrImageViewControllerDelegate <NSObject>  // the delegate should know what to do after request and apikey
 
@@ -50,3 +53,4 @@ Below is an example:
     }];
     
      }
+
