@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		69ABBA911DD6D46E00044575 /* TumblrImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ABBA901DD6D46E00044575 /* TumblrImageViewController.m */; };
 		69ABBA921DD6D46E00044575 /* TumblrImageViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69ABBA8F1DD6D46E00044575 /* TumblrImageViewController.h */; };
+		69ABBA9A1DD6D4FD00044575 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69ABBA991DD6D4FD00044575 /* UIKit.framework */; };
+		69ABBA9F1DD6D55F00044575 /* TumblrImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ABBA9C1DD6D55F00044575 /* TumblrImageCollectionViewCell.m */; };
+		69ABBAA21DD6D5A200044575 /* APICommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ABBAA11DD6D5A200044575 /* APICommunicator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +31,13 @@
 		69ABBA8C1DD6D46E00044575 /* libTumblrImageViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTumblrImageViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		69ABBA8F1DD6D46E00044575 /* TumblrImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TumblrImageViewController.h; sourceTree = "<group>"; };
 		69ABBA901DD6D46E00044575 /* TumblrImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TumblrImageViewController.m; sourceTree = "<group>"; };
+		69ABBA991DD6D4FD00044575 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		69ABBA9B1DD6D55F00044575 /* TumblrImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TumblrImageCollectionViewCell.h; sourceTree = "<group>"; };
+		69ABBA9C1DD6D55F00044575 /* TumblrImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TumblrImageCollectionViewCell.m; sourceTree = "<group>"; };
+		69ABBA9D1DD6D55F00044575 /* TumblrImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TumblrImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		69ABBA9E1DD6D55F00044575 /* TumblrImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TumblrImageViewController.xib; sourceTree = "<group>"; };
+		69ABBAA01DD6D5A200044575 /* APICommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APICommunicator.h; sourceTree = "<group>"; };
+		69ABBAA11DD6D5A200044575 /* APICommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APICommunicator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69ABBA9A1DD6D4FD00044575 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +57,7 @@
 			children = (
 				69ABBA8E1DD6D46E00044575 /* TumblrImageViewController */,
 				69ABBA8D1DD6D46E00044575 /* Products */,
+				69ABBA981DD6D4FD00044575 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,8 +74,22 @@
 			children = (
 				69ABBA8F1DD6D46E00044575 /* TumblrImageViewController.h */,
 				69ABBA901DD6D46E00044575 /* TumblrImageViewController.m */,
+				69ABBA9E1DD6D55F00044575 /* TumblrImageViewController.xib */,
+				69ABBA9B1DD6D55F00044575 /* TumblrImageCollectionViewCell.h */,
+				69ABBA9C1DD6D55F00044575 /* TumblrImageCollectionViewCell.m */,
+				69ABBA9D1DD6D55F00044575 /* TumblrImageCollectionViewCell.xib */,
+				69ABBAA01DD6D5A200044575 /* APICommunicator.h */,
+				69ABBAA11DD6D5A200044575 /* APICommunicator.m */,
 			);
 			path = TumblrImageViewController;
+			sourceTree = "<group>";
+		};
+		69ABBA981DD6D4FD00044575 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69ABBA991DD6D4FD00044575 /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69ABBAA21DD6D5A200044575 /* APICommunicator.m in Sources */,
+				69ABBA9F1DD6D55F00044575 /* TumblrImageCollectionViewCell.m in Sources */,
 				69ABBA911DD6D46E00044575 /* TumblrImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

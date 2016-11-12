@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TumblrImageViewController">
+            <connections>
+                <outlet property="blogSearchBar" destination="NiP-1I-gDw" id="EDU-1l-EDJ"/>
+                <outlet property="imageCollectionView" destination="w1n-3Q-0lc" id="MvP-dW-hFh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="Input Tumblr Blog Name" translatesAutoresizingMaskIntoConstraints="NO" id="NiP-1I-gDw">
+                    <rect key="frame" x="20" y="16" width="269" height="44"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="LEb-tE-jaT"/>
+                    </connections>
+                </searchBar>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="w1n-3Q-0lc">
+                    <rect key="frame" x="0.0" y="66" width="375" height="601"/>
+                    <color key="backgroundColor" red="0.2111349609" green="0.26491145510000003" blue="0.273378014" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="SMB-UG-F5M">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="BR1-kO-b5k"/>
+                        <outlet property="delegate" destination="-1" id="PcO-E1-bve"/>
+                    </connections>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NcP-vv-icn">
+                    <rect key="frame" x="299" y="16" width="66" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="66" id="xRv-oO-3gc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="Cancel">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="cancelBardidTouched:" destination="-1" eventType="touchUpInside" id="J0Q-N6-HFJ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.2111349609" green="0.26491145510000003" blue="0.273378014" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="NcP-vv-icn" secondAttribute="trailing" constant="10" id="Fys-l3-PTi"/>
+                <constraint firstItem="NcP-vv-icn" firstAttribute="centerY" secondItem="NiP-1I-gDw" secondAttribute="centerY" id="Pck-Os-2up"/>
+                <constraint firstItem="NiP-1I-gDw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="QEw-C2-6i3"/>
+                <constraint firstItem="w1n-3Q-0lc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Sxu-Z9-hh0"/>
+                <constraint firstItem="w1n-3Q-0lc" firstAttribute="top" secondItem="NiP-1I-gDw" secondAttribute="bottom" constant="6" id="bfz-jt-1Z9"/>
+                <constraint firstAttribute="trailing" secondItem="w1n-3Q-0lc" secondAttribute="trailing" id="d8T-Aa-2rm"/>
+                <constraint firstAttribute="bottom" secondItem="w1n-3Q-0lc" secondAttribute="bottom" id="jMl-Gp-UOp"/>
+                <constraint firstItem="NcP-vv-icn" firstAttribute="height" secondItem="NiP-1I-gDw" secondAttribute="height" id="kdc-pS-eZK"/>
+                <constraint firstItem="NiP-1I-gDw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="16" id="mZK-eH-pxr"/>
+                <constraint firstItem="NcP-vv-icn" firstAttribute="leading" secondItem="NiP-1I-gDw" secondAttribute="trailing" constant="10" id="qFZ-yr-RRM"/>
+            </constraints>
+            <point key="canvasLocation" x="26.5" y="51.5"/>
+        </view>
+    </objects>
+</document>
