@@ -139,7 +139,12 @@
 }
 
 - (void)didRequestFailedDueToErrorMessage:(NSString *)errorMessage{
-    [_delegate didRequestFailedDueToErrorMessage:errorMessage];
+    
+    if ([_delegate respondsToSelector:@selector(didRequestFailedDueToErrorMessage)]){
+        [_delegate didRequestFailedDueToErrorMessage:errorMessage];
+    }
+    
+    
 }
 
 
