@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "APICommunicator.h"
 
-@protocol TumblrImageViewControllerDelegate <NSObject>  // the delegate should know what to do after request
+@protocol TumblrImageViewControllerDelegate <NSObject>  // the delegate should know what to do after request and apikey
 - (void)tumblrImagePickerController:(__kindof UIViewController *)picker didFinishPickingImage:(UIImage *)image;
 - (NSString*)apikey;
 @end

@@ -40,7 +40,20 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT"
+s.license      = { :type => 'Apache License, Version 2.0', :text => <<-LICENSE
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+LICENSE
+}
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -65,8 +78,8 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.platform     = :ios
-  #s.platform     = :ios, "10.0"
+  #s.platform     = :ios
+  s.platform     = :ios, "10.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -92,7 +105,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "TumblrImageViewController", "TumblrImageViewController/**/*.{h,m,xib}"
+  s.source_files  = "TumblrImageViewController", "TumblrImageViewController/**/*.{h,m}"
   s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -107,7 +120,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  # s.resources = "Resources/*.png"
+  s.resources = "TumblrImageViewController/**/*.xib"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
