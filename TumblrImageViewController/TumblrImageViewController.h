@@ -29,7 +29,7 @@
 // you can either set num of images for each row or size for each image, but the latter one has higher priority
 @property (assign, nonatomic) int numOfColumns;
 @property (assign, nonatomic) CGSize imageCellSize;
-@property (strong, nonatomic) NSString* alertMessage;
+
 
 
 @end

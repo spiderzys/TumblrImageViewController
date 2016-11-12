@@ -28,7 +28,6 @@ To get the apikey (OAuth Consumer Key), you can go to https://www.tumblr.com/doc
 
 You can specify the number of images for each row by setting numOfColumns.
 You can also specify the image cell size by setting imageCellSize. However, setting this will disable the function of numOfColumns.
-In addition, you can set alertMessage for when no return data.
 
 Below is an example:
 

@@ -129,31 +129,10 @@
 - (void)didGetPhotoUrls:(NSMutableArray *)photoUrlArray{
     dispatch_async(dispatch_get_main_queue(), ^{
         
-        if(photoUrlArray.count == 0){  // show alert if no result
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"No return. Please check your input and network" preferredStyle:UIAlertControllerStyleAlert];
-            if (_alertMessage){
-                alert.message = _alertMessage;
-            }
-            UIAlertAction *action = [UIAlertAction actionWithTitle:@"ok" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-                [alert dismissViewControllerAnimated:YES completion:nil];
-            }];
-            [alert addAction:action];
-            [self presentViewController:alert animated:YES completion:^{
-                
-            }];
-            
-        }
         
-        else if(imageUrlArray.count == 0){ //load colletion view
-            
-            imageUrlArray = [NSMutableArray arrayWithArray:photoUrlArray];
-            [_imageCollectionView reloadData];
-        }
-        else {
-            
-            [imageUrlArray addObjectsFromArray:photoUrlArray];
-            
-        }
+        imageUrlArray = [NSMutableArray arrayWithArray:photoUrlArray];
+        [_imageCollectionView reloadData];
+        
         _blogSearchBar.userInteractionEnabled = YES;
         _imageCollectionView.scrollEnabled = YES;
     });
