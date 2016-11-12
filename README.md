@@ -5,8 +5,15 @@ It shows the images of tumblr blogs in the controller.
 To use it, the implementation of the following protocal is necessary
 
 @protocol TumblrImageViewControllerDelegate <NSObject>  // the delegate should know what to do after request and apikey
+
+@required
+
 - (void)tumblrImagePickerController:(__kindof UIViewController *)picker didFinishPickingImage:(UIImage *)image;
 - (NSString*)apikey;
+
+@optional
+
+- (void)didRequestFailedDueToErrorMessage:(NSString*)errorMessage;
 
 @end
 
