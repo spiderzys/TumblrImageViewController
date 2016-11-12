@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TumblrImageViewController"
-  s.version      = "1.03"
+  s.version      = "1.05"
   s.summary      = "A view controller showing images from tumblr blog"
 
   # This description is used to generate tags and improve search results.
@@ -94,7 +94,7 @@ LICENSE
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source  = { :git => "https://github.com/spiderzys/TumblrImageViewController.git", :tag => "1.03" }
+  s.source  = { :git => "https://github.com/spiderzys/TumblrImageViewController.git", :tag => "1.05" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
