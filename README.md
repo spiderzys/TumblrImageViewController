@@ -18,10 +18,28 @@ In addition, you can set alertMessage for when no return data.
 
 Below is an example:
 
-TumblrImageViewController *tumblrImageViewController = [[TumblrImageViewController alloc]init];
-
-    tumblrImageViewController.numOfColumns = 5;
     
-    [self presentViewController:tumblrImageViewController animated:YES completion:^{
+TumblrImageViewController *tumblrImageViewController = [[TumblrImageViewController alloc]init];
+    
+tumblrImageViewController.numOfColumns = 5;
+    
+tumblrImageViewController.delegate = self;
+    
+[self presentViewController:tumblrImageViewController animated:YES completion:^{
         
     }];
+
+
+
+- (NSString*)apikey{
+    return @"put your key";
+}
+
+- (void)tumblrImagePickerController:(__kindof UIViewController *)picker didFinishPickingImage:(UIImage *)image{
+
+    [picker dismissViewControllerAnimated:YES completion:^{
+    
+        self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    }];
+    
+}
